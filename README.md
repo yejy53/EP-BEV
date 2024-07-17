@@ -4,3 +4,6 @@ About The official implementation of the paper "Cross-view image geo-localizatio
 # Data preparation
 
 The CVGlobal dataset can be downloaded from "https://opendatalab.com/CVeRS/CVGlobal"
+
+
+![ECCV2](https://github.com/user-attachments/assets/02252a74-a116-4829-80af-96f2426a326a)
