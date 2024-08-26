@@ -7,3 +7,7 @@ The CVGlobal dataset can be downloaded from "https://opendatalab.com/CVeRS/CVGlo
 
 
 ![ECCV2](https://github.com/user-attachments/assets/02252a74-a116-4829-80af-96f2426a326a)
+
+## References
+We appreciate the previous open-source works.
+* [Boosting3DoF]([https://github.com/fundamentalvision/BEVFormer](https://github.com/YujiaoShi/Boosting3DoFAccuracy))
