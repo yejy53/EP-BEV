@@ -8,6 +8,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 from torchvision.utils import save_image
 from tqdm import tqdm
+from PIL import ImageOps
 
 def grid_sample(image, optical, jac=None):
     # Interpolation function 
@@ -86,7 +87,6 @@ def grid_sample(image, optical, jac=None):
 def BEV_transform(rot, B, S, H, W, meter_per_pixel, Camera_height):
 
     # This function performs BEV conversion and establishes the mapping relationships between different coordinates.
-
     # Create a meshgrid for coordinates
     ii, jj = torch.meshgrid(torch.arange(0, S, dtype=torch.float32, device=rot.device), 
                             torch.arange(0, S, dtype=torch.float32, device=rot.device), indexing='ij')
@@ -118,8 +118,27 @@ def BEV_transform(rot, B, S, H, W, meter_per_pixel, Camera_height):
     
     return uv  # Return the UV coordinates
 
+def resize_and_pad_image(image, target_height, target_width):
 
-def process_images(input_folder, output_folder, uv, H, W, B):
+    # For CVUSA
+    # Get the current dimensions of the image
+    current_width, current_height = image.size
+
+    # Calculate the padding needed for height
+    if current_height == target_height:
+        padded_image = image
+    else:
+        # Calculate the padding needed for the top and bottom
+        top_padding = (target_height - current_height) // 2
+        bottom_padding = target_height - current_height - top_padding
+        # Use Pillow's ImageOps.expand to add padding
+        padded_image = ImageOps.expand(image, (0, top_padding, 0, bottom_padding), fill='black')
+
+    # Resize the image to the target dimensions
+    resized_image = padded_image.resize((target_width, target_height), Image.Resampling.LANCZOS)
+    return resized_image
+
+def process_images(input_folder, output_folder, uv, H, W, B, resize_and_pad=False):
     # This function performs BEV conversion in batch mode.
 
     # Define transformation: resize and convert to tensor
@@ -147,6 +166,11 @@ def process_images(input_folder, output_folder, uv, H, W, B):
             file_path = os.path.join(input_folder, file)
             output_path = os.path.join(output_folder, file)
             image = Image.open(file_path)
+
+            # Apply resize and pad preprocessing if the flag is set to True
+            if resize_and_pad:
+                image = resize_and_pad_image(image, H, W)
+
             image_tensor = transform(image)
             batch_images.append(image_tensor)
             batch_output_paths.append(output_path)
@@ -161,15 +185,16 @@ def process_images(input_folder, output_folder, uv, H, W, B):
         for j, transformed_image in enumerate(transformed_images):
             save_image(transformed_image, batch_output_paths[j])
 
+
 def main():
     # Define input and output directories for processing images
     input_folder = '/mnt/yejunyan/code/street-test'
     output_folder = '/mnt/yejunyan/code/bev-test'
 
-    # Set parameters for image processing
+    # Set parameters for image processing（CVACT）
     B = 1            # Batch size; The default value is usually 1, which needs to be divisible by the number of files.
     S = 512           # Size parameter for the grid (Satellite size)
-    H = 832          # Height of the input street image
+    H = 832           # Height of the input street image
     W = 1664          # Width of the input street image
     Camera_height = -1.5 # Camera height parameter for BEV transformation (Assume the difference between the ground height and the camera height)
 
@@ -184,6 +209,30 @@ def main():
 
     # Process images using the computed UV coordinates
     process_images(input_folder, output_folder, uv, H, W, B)
+
+
+
+    # Set parameters for image processing（CVUSA）
+
+    # B = 1            # Batch size; The default value is usually 1, which needs to be divisible by the number of files.
+    # S = 512           # Size parameter for the grid (Satellite size)
+    # H = 616           # Height of the input street image
+    # W = 1232          # Width of the input street image
+
+    # Camera_height = -1.5 # Camera height parameter for BEV transformation (Assume the difference between the ground height and the camera height)
+
+    # # Create a rotation tensor with all values set to 90 degrees (If North is in the center of Street View)
+    # rot = torch.tensor([90] * B, dtype=torch.float32)
+
+    # # Define the scale of meters per pixel （CVACT）
+    # meter_per_pixel = 0.06 
+
+    # # Compute UV coordinates for the satellite to ground transformation
+    # uv = BEV_transform(rot, B, S, H, W, meter_per_pixel, Camera_height)
+
+    # # Process images using the computed UV coordinates
+    # process_images(input_folder, output_folder, uv, H, W, B, True)
+
 
 if __name__ == "__main__":
     main()
