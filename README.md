@@ -5,7 +5,8 @@ Cross-view geolocalization identifies the geographic location of street view ima
 ![method](method.png)
 
 ## News
-- 2024/08, source code of BEV transformation is released（CVACT/CVUSA）.
+- Uploaded the training and testing code of the CVACT dataset
+- Source code of BEV transformation is released（CVACT/CVUSA）.
 
 ## Installation
 Clone this repo to a local folder:
