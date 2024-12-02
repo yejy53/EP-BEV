@@ -38,7 +38,7 @@ The publicly available datasets used in this paper can be obtained from the foll
 
 ```
 ├─ CVACT
-  ├── ACT_data.mat/
+  ├── ACT_data.mat
   ├── ANU_data_small/
     ├── bev/
     ├── satview_polish/ 
