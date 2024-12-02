@@ -3,10 +3,10 @@ import torch
 from dataclasses import dataclass
 from torch.utils.data import DataLoader
 
-from sample4geo.dataset.cvact_c_bev import CVACTDatasetEval, CVACTDatasetTest
-from sample4geo.transforms import get_transforms_val
-from sample4geo.evaluate.cvact import evaluate,calc_sim
-from sample4geo.model import TimmModel
+from retrieval.dataset.cvact_c_bev import CVACTDatasetEval, CVACTDatasetTest
+from retrieval.transforms import get_transforms_val
+from retrieval.evaluate.cvact import evaluate,calc_sim
+from retrieval.model import TimmModel
 
 
 @dataclass

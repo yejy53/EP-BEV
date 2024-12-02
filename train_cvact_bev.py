@@ -10,13 +10,13 @@ from torch.cuda.amp import GradScaler
 from torch.utils.data import DataLoader
 from transformers import get_constant_schedule_with_warmup, get_polynomial_decay_schedule_with_warmup, get_cosine_schedule_with_warmup
 
-from sample4geo.dataset.cvact_bev import CVACTDatasetTrain, CVACTDatasetEval, CVACTDatasetTest
-from sample4geo.transforms import get_transforms_train, get_transforms_val
-from sample4geo.utils import setup_system, Logger
-from sample4geo.trainer import train
-from sample4geo.evaluate.cvusa_and_cvact import evaluate, calc_sim
-from sample4geo.loss import InfoNCE
-from sample4geo.model import TimmModel
+from retrieval.dataset.cvact_bev import CVACTDatasetTrain, CVACTDatasetEval, CVACTDatasetTest
+from retrieval.transforms import get_transforms_train, get_transforms_val
+from retrieval.utils import setup_system, Logger
+from retrieval.trainer import train
+from retrieval.evaluate.cvact import evaluate, calc_sim
+from retrieval.loss import InfoNCE
+from retrieval.model import TimmModel
 
 @dataclass
 class Configuration:
