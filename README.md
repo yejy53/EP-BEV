@@ -50,6 +50,10 @@ The publicly available datasets used in this paper can be obtained from the foll
 
 ```
 
+## Use our pre-trained model for retrieval 
+1. You can download a pre-trained model (e.g. cvact) from [huggingface](1) and place it in ckpt folder.
+2. 2. You need to organize the generated BEV images into the above dataset format. You can download the generated BEV images directly from the following link to get consistent results, or generate BEV images yourself and then retrain.
+
 ## ❤️ Acknowledgements
 
 Our code is built on top of [Sample4G](https://github.com/Skyy93/Sample4Geo) and [Boosting3DoF](https://github.com/YujiaoShi/Boosting3DoFAccuracy). We appreciate the previous open-source works.
