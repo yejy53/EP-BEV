@@ -34,6 +34,18 @@ The publicly available datasets used in this paper can be obtained from the foll
 
 ![ECCV2](https://github.com/user-attachments/assets/02252a74-a116-4829-80af-96f2426a326a)
 
+## Data Structure:
+
+```
+├─ CVACT
+  ├── ACT_data.mat/
+  ├── ANU_data_small/
+    ├── bev/
+    ├── satview_polish/ 
+    ├── streetview/	
+  └──ANU_data_test/
+
+```
 
 ## ❤️ Acknowledgements
 
