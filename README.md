@@ -34,6 +34,7 @@ The publicly available datasets used in this paper can be obtained from the foll
 
 ![ECCV2](https://github.com/user-attachments/assets/02252a74-a116-4829-80af-96f2426a326a)
 
-## References
-We appreciate the previous open-source works.
-* [Boosting3DoF]([https://github.com/YujiaoShi/Boosting3DoFAccuracy])
+
+## ❤️ Acknowledgements
+
+Our code is built on top of [Sample4G](https://github.com/Skyy93/Sample4Geo) and [Boosting3DoF]([https://github.com/YujiaoShi/Boosting3DoFAccuracy]). We appreciate the previous open-source works.
