@@ -53,7 +53,7 @@ The publicly available datasets used in this paper can be obtained from the foll
 ## Use our pre-trained model for retrieval 
 1. You can download a pre-trained model (e.g. cvact) from [huggingface](https://huggingface.co/Yejy53/EB-BEV-CVACT/tree/main) and place it in ckpt folder.
 2. You need to organize the generated BEV images into the above dataset format. You can download the generated BEV images directly from the following [huggingface](https://huggingface.co/datasets/Yejy53/CVACT-BEV) link to get consistent results, or generate BEV images yourself and then retrain.
-3. When performing Street View-BEV Co-Retrieval, you only need to add the similarity of using a pure Street View image to the similarity of using a BEV image. The method and weights for using Street View search can be found in the [Sample4G](https://github.com/Skyy93/Sample4Geo).
+3. When performing Street View-BEV Co-Retrieval, you only need to add the similarity of using a pure Street View image to the similarity of using a BEV image. The weights for using Street View search can be obtained from the following [huggingface](https://huggingface.co/Yejy53/CVACT-Street/tree/main) link. The method and weights for using Street View search also can be found in the [Sample4G](https://github.com/Skyy93/Sample4Geo).
 
 ## ❤️ Acknowledgements
 
