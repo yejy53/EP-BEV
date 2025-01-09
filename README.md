@@ -5,7 +5,7 @@ Cross-view geolocalization identifies the geographic location of street view ima
 ![method](method.png)
 
 ## News
-- Street View-BEV Co-Retrieval content will be available soon.
+- The code for Street View-BEV Co-retrieval inference is now available. If there is any missing code or abnormality, you can report it to me in the issue.
 - The training and testing code for the BEV branch on CVACT has been released.
 - Source code of BEV transformation is released（CVACT/CVUSA）.
 
