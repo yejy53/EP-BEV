@@ -59,3 +59,17 @@ The publicly available datasets used in this paper can be obtained from the foll
 ## ❤️ Acknowledgements
 
 Our code is built on top of [Sample4G](https://github.com/Skyy93/Sample4Geo) and [Boosting3DoF](https://github.com/YujiaoShi/Boosting3DoFAccuracy). We appreciate the previous open-source works.
+
+## BibTeX 🙏
+
+If you have any questions, be free to contact with me! 
+```
+@inproceedings{ye2025cross,
+  title={Cross-view image geo-localization with Panorama-BEV Co-Retrieval Network},
+  author={Ye, Junyan and Lv, Zhutao and Li, Weijia and Yu, Jinhua and Yang, Haote and Zhong, Huaping and He, Conghui},
+  booktitle={European Conference on Computer Vision},
+  pages={74--90},
+  year={2025},
+  organization={Springer}
+}
+```
