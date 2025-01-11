@@ -4,8 +4,8 @@ from dataclasses import dataclass
 from torch.utils.data import DataLoader
 from congeo.dataset.cvact import CVACTDatasetEval
 from congeo.transforms import get_transforms_val, get_transforms_val
-from congeo.evaluate.cvusa_and_cvglobal_BEV import evaluate
-from congeo.model import TimmModel_ConGeo
+from congeo.evaluate.cvusa_and_cvact_both import evaluate
+from congeo.model import TimmModel
 
 @dataclass
 class Configuration:
