@@ -24,6 +24,8 @@ conda activate EP-BEV
 pip install -r requirements.txt
 ```
 
+If huggingface cannot download the weights successfully, you can add export HF_ENDPOINT="https://hf-mirror.com" at the end of .bashrc and reactivate it.
+
 
 ## Data Preparation
 The publicly available datasets used in this paper can be obtained from the following sources: 
