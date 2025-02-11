@@ -6,15 +6,16 @@
 [![Dataset](https://img.shields.io/badge/HF-Model-yellow)](https://huggingface.co/datasets/Yejy53/CVGlobal)
 
 
-Cross-view geolocalization identifies the geographic location of street view images by matching them with a georeferenced satellite database. Significant challenges arise due to the drastic appearance and geometry differences between views. In this paper, we propose a new approach for cross-view image geo-localization, i.e.,  the Panorama-BEV Co-Retrieval Network. Specifically, by utilizing the ground plane assumption and geometric relations, we convert street view panorama images into the BEV view, reducing the gap between street panoramas and satellite imagery. In the existing retrieval of street view panorama images and satellite images, we introduce BEV and satellite image retrieval branches for collaborative retrieval. By retaining the original street view retrieval branch, we overcome the limited perception range issue of BEV representation. Our network enables comprehensive perception of both the global layout and local details around the street view capture locations. Additionally, we introduce CVGlobal, a global cross-view dataset that is closer to real-world scenarios. This dataset adopts a more realistic setup, with street view directions not aligned with satellite images. CVGlobal also includes cross-regional, cross-temporal, and street view to map retrieval tests, enabling a comprehensive evaluation of algorithm performance.
+This repository contains the official implementation of the paper: Cross-view image geo-localization with Panorama-BEV Co-Retrieval Network. It is a very effective cross-view retrieval framework by adding an additional street view BEV retrieval branch. It achieves leading performance on multiple datasets, including VIGOR, CVUSA to CVACT retrieval.
 
 ![method](method.png)
 
 ## 📢 News
-- The code for Street View-BEV Co-retrieval inference is now available. If there is any missing code or abnormality, you can report it to me in the issue.
-- The training and testing code for the BEV branch on CVACT has been released.
-- Source code of BEV transformation is released（CVACT/CVUSA）.
-- EP-BEV is accepted to ICLR 2025.
+- **2024-12** We also published a new work on cross-view retrieval based on Natural Language text: Where am i ? CVG-Text [here](https://arxiv.org/abs/2412.17007)
+- **2024-10** The code for Street View-BEV Co-retrieval inference is now available. If there is any missing code or abnormality, you can report it to me in the issue.
+- **2024-09** The training and testing code for the BEV branch on CVACT has been released.
+- **2024-08** Source code of BEV transformation is released（CVACT/CVUSA）.
+- **2024-07-1** EP-BEV is accepted to ECCV 2024.
 
 ## Installation
 Clone this repo to a local folder:
