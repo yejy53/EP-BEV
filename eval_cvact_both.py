@@ -2,10 +2,10 @@ import os
 import torch
 from dataclasses import dataclass
 from torch.utils.data import DataLoader
-from congeo.dataset.cvact import CVACTDatasetEval
-from congeo.transforms import get_transforms_val, get_transforms_val
-from congeo.evaluate.cvusa_and_cvact_both import evaluate
-from congeo.model import TimmModel
+from retrieval.dataset.cvact import CVACTDatasetEval
+from retrieval.transforms import get_transforms_val, get_transforms_val
+from retrieval.evaluate.cvusa_and_cvact_both import evaluate
+from retrieval.model import TimmModel
 
 @dataclass
 class Configuration:
