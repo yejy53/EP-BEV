@@ -70,9 +70,10 @@ The publicly available datasets used in this paper can be obtained from the foll
 
 Our code is built on top of [Sample4G](https://github.com/Skyy93/Sample4Geo) and [Boosting3DoF](https://github.com/YujiaoShi/Boosting3DoFAccuracy). We appreciate the previous open-source works.
 
-## BibTeX 🙏
-
 If you have any questions, be free to contact with me! 
+
+## BibTeX 
+
 ```
 @inproceedings{ye2025cross,
   title={Cross-view image geo-localization with Panorama-BEV Co-Retrieval Network},
