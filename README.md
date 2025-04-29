@@ -1,7 +1,7 @@
 
 ## Cross-view image geo-localization with Panorama-BEV Co-Retrieval Network
 
-[![arXiv](https://img.shields.io/badge/arXiv-2501.16764-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2501.16764)
+[![arXiv](https://img.shields.io/badge/arXiv-2501.16764-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2408.05475)
 [![Model](https://img.shields.io/badge/HF-Model-yellow)](https://huggingface.co/Yejy53/EB-BEV-CVACT)
 [![Dataset](https://img.shields.io/badge/HF-Model-yellow)](https://huggingface.co/datasets/Yejy53/CVGlobal)
 
