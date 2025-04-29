@@ -3,7 +3,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2501.16764-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2408.05475)
 [![Model](https://img.shields.io/badge/HF-Model-yellow)](https://huggingface.co/Yejy53/EB-BEV-CVACT)
-[![Dataset](https://img.shields.io/badge/HF-Model-yellow)](https://huggingface.co/datasets/Yejy53/CVGlobal)
+[![Dataset](https://img.shields.io/badge/HF-Dataset-yellow)](https://huggingface.co/datasets/Yejy53/CVGlobal)
 
 
 This repository contains the official implementation of the paper: Cross-view image geo-localization with Panorama-BEV Co-Retrieval Network. It is a very effective cross-view retrieval framework by adding an additional street view BEV retrieval branch. It achieves leading performance on multiple datasets, including VIGOR, CVUSA to CVACT retrieval.
