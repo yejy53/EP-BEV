@@ -11,6 +11,7 @@ This repository contains the official implementation of the paper: Cross-view im
 ![method](method.png)
 
 ## 📢 News
+- **2025-6** We are very happy to announce that where am I was accepted by ICCV 2025
 - **2024-12** We also published a new work on cross-view retrieval based on Natural Language text: Where am i ? CVG-Text [here](https://arxiv.org/abs/2412.17007)
 - **2024-10** The code for Street View-BEV Co-retrieval inference is now available. If there is any missing code or abnormality, you can report it to me in the issue.
 - **2024-09** The training and testing code for the BEV branch on CVACT has been released.
