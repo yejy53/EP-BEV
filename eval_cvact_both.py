@@ -58,7 +58,7 @@ if __name__ == '__main__':
     # Load pretrained Checkpoint for Model 1    
     if config.checkpoint_start_1 is not None:  
         print("Start from:", config.checkpoint_start_1)
-        model_state_dict_1 = torch.load(config.checkpoint_start_1)  
+        model_state_dict_1 = torch.load(config.checkpoint_start_1, weights_only=True)
         model_1.load_state_dict(model_state_dict_1, strict=False)     
     
     model_1 = model_1.to(config.device)
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     # Load pretrained Checkpoint for Model 2    
     if config.checkpoint_start_2 is not None:  
         print("Start from:", config.checkpoint_start_2)
-        model_state_dict_2 = torch.load(config.checkpoint_start_2)  
+        model_state_dict_2 = torch.load(config.checkpoint_start_2, weights_only=True)
         model_2.load_state_dict(model_state_dict_2, strict=False)     
     
     model_2 = model_2.to(config.device)

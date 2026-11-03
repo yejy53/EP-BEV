@@ -147,7 +147,7 @@ if __name__ == '__main__':
     # Load pretrained Checkpoint    
     if config.checkpoint_start is not None:  
         print("Start from:", config.checkpoint_start)
-        model_state_dict = torch.load(config.checkpoint_start)  
+        model_state_dict = torch.load(config.checkpoint_start, weights_only=True)
         model.load_state_dict(model_state_dict, strict=False)     
 
     # Data parallel
